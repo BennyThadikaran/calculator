@@ -49,155 +49,103 @@ table {
 	border-spacing: 0;
 }
 
-
-
-/* FONT STYLES */
-
-body {
-	font-family: "Roboto", sans-serif;
-	font-size: 16px;
-	line-height: 27px;
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 
-h1 {
-	font-size: 33px;
-	line-height: 52px;
-	margin-bottom: 27px;
+
+/****************
+* Calculator  	*
+*****************/
+
+/*
+					#wrapper
+*/
+.cal {
+	width: 315px;
+	height: auto;
+	background: #2F4F4F;
+	border-radius: 5px;
+	margin: 10px auto;
+	padding: 10px;
 }
 
-h2 {
-	font-size: 26px;
-	line-height: 41px;
-	margin: 44px 0 17px;
+.cal * {
+	font: 400 16px/27px "Roboto", sans-serif;
 }
 
-h3 {
-	font-size: 20px;
-	line-height: 33px;
-	margin-top: 27px 0 11px;
+.cal p {
+	margin: 0;
+	text-align: center;
+	color: #fff176;
+	font-weight: 400;
 }
 
-h4 {
-	font-size: 16px;
-	line-height: 27px;
-	font-weight: bold;
-	margin-bottom: 7px;
+.cal a {
+	color: inherit;
 }
 
-p,
-ul,
-ol,
-blockquote {
-	margin-bottom: 27px;
+/*
+					#screen
+*/
+.cal-screen {
+	width: 100%;
+	height: auto;
+	margin: 10px 0 20px;
+	background: #B0BEC5;
+  border: 0.5px solid #607D8B;
 }
 
-ul,
-ol {
-	margin-left: 27px;
+.cal-input,
+.cal-result {
+	width: 100%;
+  height: 40px;
+  text-align: right;
+	padding: 0 5px;
+	letter-spacing: 3px;
 }
 
-li {
-	margin-bottom: 11px;
+.cal-input {
+	background: inherit;
+	border: none;
+	text-align: right;
 }
 
-blockquote {
-	padding-left: 17px;
-	border-left: 7px solid rgba(0,0,0,0.15);
+/*
+					#keypad
+*/
+.cal-keypad button {
+  display: inline-block;
+	width: 63px;
+  height: 50px;
+	margin: 5px;
+	background: #fafafa;
+  cursor: pointer;
 }
 
-ul ul,
-ul ol,
-ol ul,
-ol ol {
-	margin-bottom: 0;
+.keypad-left {
+	display: inline-block;
+	width: 219px;
 }
 
-@media (min-width: 768px) {
-	body {
-		line-height: 29px;
-	}
-
-	h1 {
-		margin-bottom: 29px;
-	}
-
-	h2 {
-		line-height: 43px;
-		margin: 47px 0 18px;
-	}
-
-	h3 {
-		line-height: 35px;
-		margin-top: 29px;
-	}
-
-	h4 {
-		line-height: 29px;
-	}
-
-	p,
-	ul,
-	ol,
-	blockquote {
-		margin-bottom: 29px;
-	}
-
-	ul,
-	ol {
-		margin-left: 29px;
-	}
-
+.keypad-right {
+	display: inline-block;
+	width: 76px;
+	vertical-align: top;
 }
 
-@media (min-width: 992px) {
-
-	h1 {
-		line-height: 55px;
-	}
-
-	h2 {
-		line-height: 45px;
-		margin-top: 49px;
-	}
-
-	blockquote {
-		padding-left: 19px;
-	}
-
+.cal-keypad .highlight {
+	background: #ef5350;
+	border-color: #e57373;
+	color: #fafafa;
 }
 
-@media (min-width: 1200px) {
-	body {
-		line-height: 32px;
-	}
+.keypad-right .highlight {
+	background: #fff9c4;
+	color: #ef5350;
+	border-color: #fff176;
+}
 
-	h1 {
-		margin-bottom: 32px;
-	}
-
-	h2 {
-		margin: 52px 0 20px;
-	}
-
-	h3 {
-		line-height: 38px;
-		margin-top: 32px;
-	}
-
-	h4 {
-		line-height: 32px;
-	}
-
-	p,
-	ul,
-	ol,
-	blockquote {
-		margin-bottom: 32px;
-	}
-
-	ul,
-	ol {
-		margin-left: 32px;
-	}
-
+.cal-keypad button:active {
+  border: 0.5px solid inset #607D8B;
 }
