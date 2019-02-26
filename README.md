@@ -1,5 +1,7 @@
 # Calculator
 
+https://bennythadikaran.github.io/calculator/
+
 A standard Calculator written in vanilla Javascript (ES 5).
 
 - HTML structure is dynamically loaded with JS.
