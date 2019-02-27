@@ -258,7 +258,7 @@ var Calculator = (function () {
                 },
 
                 uiScreen = Node.create("div", {"class": "cal-screen"}),
-                input = Node.create("input", {type: "text", id: "input", "class": "cal-input", autofocus: ""}),
+                input = Node.create("input", {type: "text", id: "input", "class": "cal-input", autofocus: "", readonly: ""}),
                 result = Node.create("div", {id: "result", "class": "cal-result"}),
 
                 keypad = Node.create("div", {"class": "cal-keypad"}),
@@ -287,7 +287,13 @@ var Calculator = (function () {
             }
 
             keypad.addEventListener("click", inputHandler);
-            input.addEventListener("keydown", inputHandler);
+
+            // Mobile virtual keyword on input focus can mess with UX
+            if (navigator.userAgent.indexOf("mobi") === -1) {
+                input.removeAttribute("readonly");
+                // Event delegation model may not be suitable for multiple forms on page
+                input.addEventListener("keydown", inputHandler);
+            }
 
             footer.appendChild(a);
 
