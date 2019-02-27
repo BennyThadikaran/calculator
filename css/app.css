@@ -109,7 +109,9 @@ table {
 	background: inherit;
 	border: none;
 	text-align: right;
+	outline: none;
 }
+
 
 /*
 					#keypad
@@ -121,6 +123,15 @@ table {
 	margin: 5px;
 	background: #fafafa;
   cursor: pointer;
+	outline: 0;
+}
+
+.cal-keypad button::-moz-focus-inner {
+	border: 0;
+}
+
+.cal-keypad button:active {
+	border: 1px solid #000;
 }
 
 .keypad-left {
