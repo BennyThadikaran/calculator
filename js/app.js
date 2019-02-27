@@ -289,7 +289,7 @@ var Calculator = (function () {
             keypad.addEventListener("click", inputHandler);
 
             // Mobile virtual keyword on input focus can mess with UX
-            if (navigator.userAgent.indexOf("mobi") === -1) {
+            if (navigator.userAgent.toLowerCase().indexOf("mobi") === -1) {
                 input.removeAttribute("readonly");
                 // Event delegation model may not be suitable for multiple forms on page
                 input.addEventListener("keydown", inputHandler);
